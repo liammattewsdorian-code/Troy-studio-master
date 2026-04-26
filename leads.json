@@ -1,0 +1,294 @@
+[
+  {
+    "query": "quiero cotizar y cerrar por whatsapp",
+    "reply": "La forma más rápida de cerrar es por WhatsApp. Si quieres, te preparo el mensaje ideal para que me escribas con tu negocio, objetivo, tiempo y presupuesto.",
+    "conversation": [
+      {
+        "role": "gaby",
+        "content": "Dime qué necesitas. Puedo ayudarte con servicios, precios, contacto o proyectos."
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Pregúntame por servicios, precios, contacto o proyectos. También puedes hablarme con el micrófono."
+      },
+      {
+        "role": "user",
+        "content": "quiero una landing premium"
+      },
+      {
+        "role": "gaby",
+        "content": "Diseño y desarrollo de landings con animación, enfoque en conversión y estética de marca. • más mensajes y leads • marca más premium • CTA claros para vender mejor. Entregables típicos: estructura de conversión, copy base, animaciones visuales, CTA y seguimiento. La inversión depende del número de secciones, animaciones e integraciones. ideal si vendes servicios, lanzas un producto o quieres una web que convierta en lugar de solo verse bonita. si quieres, te digo qué secciones necesita tu landing para cerrar más clientes. ¿Tu landing vendería servicios, reservas o captación de leads?"
+      },
+      {
+        "role": "user",
+        "content": "quiero cotizar y cerrar por whatsapp"
+      }
+    ],
+    "leadState": {
+      "service": "Landing pages premium",
+      "goal": null,
+      "budget": null,
+      "timeline": null,
+      "name": null,
+      "contact": null,
+      "source": "website"
+    },
+    "source": "gaby-widget",
+    "page": "/",
+    "createdAt": "2026-04-17T19:51:53.008Z"
+  },
+  {
+    "query": "quiero cotizar y cerrar por whatsapp",
+    "reply": "La forma más rápida de cerrar es por WhatsApp. Si quieres, te preparo el mensaje ideal para que me escribas con tu negocio, objetivo, tiempo y presupuesto.",
+    "conversation": [
+      {
+        "role": "gaby",
+        "content": "Dime qué necesitas. Puedo ayudarte con servicios, precios, contacto o proyectos."
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Pregúntame por servicios, precios, contacto o proyectos. También puedes hablarme con el micrófono."
+      },
+      {
+        "role": "user",
+        "content": "hola"
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Puedo responder sobre landings, bots, automatizaciones, branding e IA. También te ayudo a orientar una venta y a definir qué necesita tu negocio."
+      },
+      {
+        "role": "user",
+        "content": "ia"
+      },
+      {
+        "role": "gaby",
+        "content": "Agentes y sistemas de IA conectados a tu operación para responder, analizar o generar contenido. • más velocidad operativa • respuesta inteligente • mejor aprovechamiento de datos. Entregables típicos: prompt system, base de conocimiento, integraciones, asistente de ventas. La inversión depende del nivel de personalización, datos y automatizaciones que necesites. ideal si quieres que parte del negocio piense y actúe contigo. si quieres, te digo qué agente de IA te conviene según tu negocio. ¿Qué parte de tu operación quieres que piense o trabaje por ti?"
+      },
+      {
+        "role": "user",
+        "content": "quiero ccrear una web"
+      },
+      {
+        "role": "gaby",
+        "content": "Diseño y desarrollo de landings con animación, enfoque en conversión y estética de marca. • más mensajes y leads • marca más premium • CTA claros para vender mejor. Entregables típicos: estructura de conversión, copy base, animaciones visuales, CTA y seguimiento. La inversión depende del número de secciones, animaciones e integraciones. ideal si vendes servicios, lanzas un producto o quieres una web que convierta en lugar de solo verse bonita. si quieres, te digo qué secciones necesita tu landing para cerrar más clientes. ¿Tu landing vendería servicios, reservas o captación de leads?"
+      },
+      {
+        "role": "user",
+        "content": "quiero cotizar y cerrar por whatsapp"
+      }
+    ],
+    "leadState": {
+      "service": "Landing pages premium",
+      "goal": null,
+      "budget": null,
+      "timeline": null,
+      "name": null,
+      "contact": null,
+      "source": "website"
+    },
+    "source": "gaby-widget",
+    "page": "/",
+    "createdAt": "2026-04-17T22:09:20.874Z"
+  },
+  {
+    "query": "quiero un bot de whatsapp",
+    "reply": "La forma más rápida de cerrar es por WhatsApp. Si quieres, te preparo el mensaje ideal para que me escribas con tu negocio, objetivo, tiempo y presupuesto.",
+    "conversation": [
+      {
+        "role": "gaby",
+        "content": "Dime qué necesitas. Puedo ayudarte con servicios, precios, contacto o proyectos."
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Pregúntame por servicios, precios, contacto o proyectos. También puedes hablarme con el micrófono."
+      },
+      {
+        "role": "user",
+        "content": "hola"
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Puedo responder sobre landings, bots, automatizaciones, branding e IA. También te ayudo a orientar una venta y a definir qué necesita tu negocio."
+      },
+      {
+        "role": "user",
+        "content": "quiero un bot de whatsapp"
+      }
+    ],
+    "leadState": {
+      "service": "Bots de WhatsApp",
+      "goal": null,
+      "budget": null,
+      "timeline": null,
+      "name": null,
+      "contact": null,
+      "source": "website"
+    },
+    "source": "gaby-widget",
+    "page": "/",
+    "createdAt": "2026-04-17T22:12:00.325Z"
+  },
+  {
+    "query": "cerrar ventas me gustaría",
+    "reply": "Perfecto. Para cerrarlo rápido, dime qué servicio quieres, cuál es tu objetivo y cuándo lo necesitas. Con eso te doy una propuesta clara y el siguiente paso por WhatsApp.",
+    "conversation": [
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Puedo responder sobre landings, bots, automatizaciones, branding e IA. También te ayudo a orientar una venta y a definir qué necesita tu negocio."
+      },
+      {
+        "role": "user",
+        "content": "Hola"
+      },
+      {
+        "role": "user",
+        "content": "Hola Gaby Me escuchas"
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Puedo responder sobre landings, bots, automatizaciones, branding e IA. También te ayudo a orientar una venta y a definir qué necesita tu negocio."
+      },
+      {
+        "role": "user",
+        "content": "Hola"
+      },
+      {
+        "role": "user",
+        "content": "Hola Gaby"
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Puedo responder sobre landings, bots, automatizaciones, branding e IA. También te ayudo a orientar una venta y a definir qué necesita tu negocio."
+      },
+      {
+        "role": "user",
+        "content": "vente Yo quiero una página web"
+      },
+      {
+        "role": "gaby",
+        "content": "Diseño y desarrollo de landings con animación, enfoque en conversión y estética de marca. • más mensajes y leads • marca más premium • CTA claros para vender mejor. Entregables típicos: estructura de conversión, copy base, animaciones visuales, CTA y seguimiento. La inversión depende del número de secciones, animaciones e integraciones. ideal si vendes servicios, lanzas un producto o quieres una web que convierta en lugar de solo verse bonita. si quieres, te digo qué secciones necesita tu landing para cerrar más clientes. ¿Tu landing vendería servicios, reservas o captación de leads?"
+      },
+      {
+        "role": "user",
+        "content": "bueno vendería servicios"
+      },
+      {
+        "role": "gaby",
+        "content": "Agentes y sistemas de IA conectados a tu operación para responder, analizar o generar contenido. • más velocidad operativa • respuesta inteligente • mejor aprovechamiento de datos. Entregables típicos: prompt system, base de conocimiento, integraciones, asistente de ventas. La inversión depende del nivel de personalización, datos y automatizaciones que necesites. ideal si quieres que parte del negocio piense y actúe contigo. si quieres, te digo qué agente de IA te conviene según tu negocio. ¿Qué parte de tu operación quieres que piense o trabaje por ti?"
+      },
+      {
+        "role": "user",
+        "content": "cerrar ventas me gustaría"
+      }
+    ],
+    "leadState": {
+      "service": "Sistemas e IA personalizados",
+      "goal": "generar más ventas y leads",
+      "budget": null,
+      "timeline": null,
+      "name": null,
+      "contact": null,
+      "source": "website"
+    },
+    "source": "gaby-widget",
+    "page": "/",
+    "createdAt": "2026-04-18T02:21:36.822Z"
+  },
+  {
+    "query": "Hola soy Gaby Pregúntame por servicios precios contacto o proyectos",
+    "reply": "Hola, soy Gaby. Puedo responder sobre landings, bots, automatizaciones, branding e IA. También te ayudo a orientar una venta y a definir qué necesita tu negocio.",
+    "conversation": [
+      {
+        "role": "gaby",
+        "content": "Dime qué necesitas. Puedo ayudarte con servicios, precios, contacto o proyectos."
+      },
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Pregúntame por servicios, precios, contacto o proyectos. También puedes hablarme con el micrófono."
+      },
+      {
+        "role": "user",
+        "content": "Hola soy Gaby Pregúntame por servicios precios contacto o proyectos"
+      }
+    ],
+    "leadState": {
+      "service": null,
+      "goal": null,
+      "budget": null,
+      "timeline": null,
+      "name": "gaby preguntame por servicios p",
+      "contact": null,
+      "source": "website"
+    },
+    "source": "gaby-widget",
+    "page": "/",
+    "createdAt": "2026-04-25T13:17:23.959Z"
+  },
+  {
+    "query": "ventas",
+    "reply": "Me encanta que quieras claridad. Lo primero es identificar qué tipo de proyecto necesitas: ¿atraer clientes (landing), automatizar respuestas (bot) o conectar todo tu sistema (automatización con IA)?",
+    "conversation": [
+      {
+        "role": "gaby",
+        "content": "Hola, soy Gaby. Pregúntame por servicios, precios, contacto o proyectos. También puedes hablarme con el micrófono."
+      },
+      {
+        "role": "user",
+        "content": "Hola Gaby"
+      },
+      {
+        "role": "gaby",
+        "content": "¡Hey! ¿Cómo estás? Cuéntame, ¿qué necesitas saber sobre nuestros servicios?"
+      },
+      {
+        "role": "user",
+        "content": "Gaby no te escucho"
+      },
+      {
+        "role": "gaby",
+        "content": "Entiendo tu pregunta, pero para darte la mejor respuesta, cuéntame un poco más: ¿estás buscando una landing, un bot de WhatsApp, automatizaciones, branding o IA personalizada?"
+      },
+      {
+        "role": "user",
+        "content": "personalizada"
+      },
+      {
+        "role": "gaby",
+        "content": "No entendí del todo tu consulta. ¿Podrías contarme con otras palabras qué necesitas? Puedo ayudarte con landings, bots, automatizaciones, branding y sistemas con IA."
+      },
+      {
+        "role": "user",
+        "content": "branding"
+      },
+      {
+        "role": "gaby",
+        "content": "Identidad visual, tono, estructura de contenido y presencia premium para que te tomen en serio. • más confianza • mejor percepción de valor • coherencia visual. Entregables típicos: logo y símbolos, paleta y tipografías, tono de marca, base de contenido. La inversión depende de si necesitas solo identidad base o un sistema de marca completo. ideal si tu negocio ya vende pero todavía no se ve como marca fuerte. si quieres, te digo qué piezas de marca te faltan para subir de nivel. ¿Tu marca necesita más autoridad, más confianza o más conversión?"
+      },
+      {
+        "role": "user",
+        "content": "más conversión"
+      },
+      {
+        "role": "gaby",
+        "content": "Me interesa ayudarte. Dime si tu proyecto tiene que ver con ventas, automatización, presencia digital o todo junto. Así puedo ser más precisa."
+      },
+      {
+        "role": "user",
+        "content": "ventas"
+      }
+    ],
+    "leadState": {
+      "service": "Branding y presencia digital",
+      "goal": "generar más ventas y leads",
+      "budget": null,
+      "timeline": null,
+      "name": null,
+      "contact": null,
+      "source": "website"
+    },
+    "source": "gaby-widget",
+    "page": "/",
+    "createdAt": "2026-04-26T08:14:46.493Z"
+  }
+]

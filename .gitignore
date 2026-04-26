@@ -1,0 +1,14 @@
+# API Keys y Secretos
+.env
+
+# Base de datos local de leads
+leads.json
+
+# Dependencias de Node
+node_modules/
+
+# Archivos de configuración y logs
+.claude/
+server.err.log
+server.out.log
+*.cmd

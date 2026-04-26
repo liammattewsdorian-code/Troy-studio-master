@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Im Troy — Solo Builder · Punta Cana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Italianno&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- GRAIN -->
+  <canvas class="noise-canvas" id="noise-canvas"></canvas>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/18492000000" target="_blank" class="wa-float" id="wa-float" title="Escríbeme por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>¿Hablamos?</span>
+  </a>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ============================================================ NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__mark">TR0Y</span>
+      <span class="nav__sep">·</span>
+      <span class="nav__sub">STUDIO</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#servicios" class="nav__link">Servicios</a></li>
+      <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+      <li><a href="#historia" class="nav__link">Historia</a></li>
+      <li><a href="#stack" class="nav__link">Stack</a></li>
+    </ul>
+    <a href="https://wa.me/18492000000" target="_blank" class="nav__cta">
+      <span class="status-dot"></span>
+      Contrátame
+    </a>
+  </nav>
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="hero">
+
+    <!-- VIDEO BG -->
+    <div class="hero__video-wrap">
+      <video id="hero-video" class="hero__video" autoplay muted playsinline loop preload="auto">
+        <source id="hero-video-source" src="video/hero-1.mp4" type="video/mp4">
+      </video>
+      <div class="hero__video-overlay"></div>
+    </div>
+
+    <button id="unmute-btn" type="button" class="mono" style="position:absolute; bottom:20px; right:20px; z-index:10; background:rgba(0,0,0,0.5); color:#fff; border:1px solid var(--cyan); padding:5px 10px; cursor:pointer; font-size:10px;">
+      ACTIVAR AUDIO
+    </button>
+
+    <!-- BG layers -->
+    <div class="hero__bg">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+    </div>
+
+    <div class="hero__inner container">
+
+      <!-- LEFT -->
+      <div class="hero__left" id="hero-left">
+
+        <div class="hero__coords" id="hero-coords">
+          <span class="mono">18.7357° N · 68.4597° O</span>
+          <span class="hero__coords-badge">En todos lados, RD</span>
+        </div>
+
+        <div class="hero__tag mono" id="hero-tag">[ solo builder · full-stack · brand creator ]</div>
+
+        <h1 class="hero__name" id="hero-name">
+          <span class="hero__name-script">Im</span>
+          <span class="hero__name-block" id="name-block">Troy</span>
+        </h1>
+
+        <p class="hero__tagline" id="hero-tagline">
+          Construyo marcas digitales, automatizo negocios<br/>
+          con IA y creo productos que generan resultados.<br/>
+          <em>Completamente solo. Desde el Caribe.</em>
+        </p>
+
+        <div class="hero__actions" id="hero-actions">
+          <a href="#servicios" class="btn btn--primary btn--lg">
+            <span>Ver mis servicios</span>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10h12M10 4l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/17282206735" target="_blank" class="btn btn--wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Hablemos ahora
+          </a>
+        </div>
+
+        <div class="hero__stats" id="hero-stats">
+          <div class="hstat">
+            <span class="hstat__n" data-count="6">0</span>
+            <span class="hstat__l">proyectos vivos</span>
+          </div>
+          <div class="hstat__div"></div>
+          <div class="hstat">
+            <span class="hstat__n">∞</span>
+            <span class="hstat__l">automatizaciones</span>
+          </div>
+          <div class="hstat__div"></div>
+          <div class="hstat">
+            <span class="hstat__n" data-count="1">0</span>
+            <span class="hstat__l">persona detrás</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT — PHOTO 3D FRAME (hero copy) -->
+      <div class="hero__right" id="hero-right">
+        <div class="photo-scene" id="hero-photo-scene">
+          <div class="photo-frame" id="hero-photo-frame">
+            <div class="photo-frame__border"></div>
+            <div class="photo-img-wrap">
+              <img src="img/253.jpg" alt="Im Troy" class="photo-img"
+                   onerror="this.parentElement.classList.add('photo-placeholder')"/>
+              <div class="photo-placeholder-inner">
+                <span class="mono" style="color:var(--cyan);font-size:13px;">← img/253.jpg</span>
+              </div>
+            </div>
+            <div class="photo-overlay">
+              <span class="photo-overlay__name">Im Troy</span>
+              <span class="photo-overlay__handle mono">@liamdorian</span>
+            </div>
+            <div class="photo-badge photo-badge--1" id="hero-pb1">
+              <img src="img/multizona-logo.png" alt="Multizona"
+                   onerror="this.outerHTML='<span class=\'badge-text\'>Multizona</span>'" />
+              <span>multizona</span>
+            </div>
+            <div class="photo-badge photo-badge--2" id="hero-pb2">
+              <span class="badge-icon">⚡</span>
+              <span>+6 proyectos</span>
+            </div>
+            <div class="photo-badge photo-badge--3" id="hero-pb3">
+              <span class="badge-icon">🤖</span>
+              <span>IA · n8n · Web</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero__scroll-hint" id="scroll-hint">
+      <div class="scroll-line-anim"></div>
+      <span class="mono">scroll</span>
+    </div>
+  </section>
+
+  <div class="page-tech-bg" id="page-tech-bg" aria-hidden="true">
+    <canvas class="page-tech-canvas" id="page-tech-canvas"></canvas>
+  </div>
+
+  <!-- ============================================================ SERVICIOS -->
+  <section class="servicios" id="servicios">
+    <div class="container">
+
+      <div class="servicios__header" id="servicios-header">
+        <span class="section-tag mono">// LO QUE HAGO</span>
+        <h2 class="section-title">Estoy para resolver<br/>y <em>crear</em>.</h2>
+        <p class="section-sub">Construyo desde cero. Automatizo lo que te roba tiempo. Te dejo listo para escalar.</p>
+      </div>
+
+      <div class="servicios__grid" id="servicios-grid">
+
+        <!-- CARD 1 -->
+        <div class="scard" data-si="0">
+          <div class="scard__3d-inner">
+            <div class="scard__num mono">01</div>
+            <div class="scard__icon scard__icon--cyan">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="28" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M16 40h16M24 36v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 20l4 4-4 4M22 28h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Landing Pages<br/>& Webs Premium</h3>
+            <p>Diseño + desarrollo con animaciones GSAP, Three.js y estética de marca que convierte visitantes en clientes.</p>
+            <ul class="scard__list">
+              <li>Animaciones cinematográficas</li>
+              <li>SEO técnico incluido</li>
+              <li>Entrega en 7-14 días</li>
+            </ul>
+            <a href="https://wa.me/17282206738?text=Quiero%20una%20landing%20page" target="_blank" class="scard__cta">
+              Quiero mi web →
+            </a>
+          </div>
+          <div class="scard__glow"></div>
+        </div>
+
+        
+
+        <!-- CARD 2 -->
+        <div class="scard" data-si="1">
+          <div class="scard__3d-inner">
+            <div class="scard__num mono">02</div>
+            <div class="scard__icon scard__icon--green">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.17 9.17l4.24 4.24M34.59 34.59l4.24 4.24M9.17 38.83l4.24-4.24M34.59 13.41l4.24-4.24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Bots & Automatización<br/>con IA</h3>
+            <p>Bots de WhatsApp que atienden 24/7, flujos n8n que trabajan mientras duermes, integrado con Llama y Claude API.</p>
+            <ul class="scard__list">
+              <li>Bot WhatsApp inteligente</li>
+              <li>Flujos n8n personalizados</li>
+              <li>Integración con tu negocio</li>
+            </ul>
+            <a href="https://wa.me/17282206735?text=Quiero%20un%20bot%20de%20WhatsApp" target="_blank" class="scard__cta">
+              Automatiza mi negocio →
+            </a>
+          </div>
+          <div class="scard__glow"></div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="scard" data-si="2">
+          <div class="scard__3d-inner">
+            <div class="scard__num mono">03</div>
+            <div class="scard__icon scard__icon--purple">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 8l4 8h8l-6.5 5.5 2.5 8.5L24 25l-8 5 2.5-8.5L12 16h8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M24 30v10M16 40h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Identidad Digital<br/>& Branding</h3>
+            <p>Marca que se ve, se recuerda y genera confianza. Logotipo, paleta, tipografía, estrategia de contenido en Instagram.</p>
+            <ul class="scard__list">
+              <li>Identidad visual completa</li>
+              <li>Plan de contenido 30 Reels</li>
+              <li>Automatización de publicación</li>
+            </ul>
+            <a href="https://wa.me/17282206735?text=Quiero%20mi%20marca%20digital" target="_blank" class="scard__cta">
+              Construye mi marca →
+            </a>
+          </div>
+          <div class="scard__glow"></div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="scard" data-si="3">
+          <div class="scard__3d-inner">
+            <div class="scard__num mono">04</div>
+            <div class="scard__icon scard__icon--orange">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="14" width="14" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><rect x="26" y="10" width="14" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M15 38v4M33 38v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Sistemas de IA<br/>Personalizados</h3>
+            <p>Agentes de inteligencia artificial conectados a tu stack. Análisis, respuestas, generación de contenido — todo automatizado.</p>
+            <ul class="scard__list">
+              <li>Agentes con Claude / Llama</li>
+              <li>Integración con tus sistemas</li>
+              <li>Dashboard de control</li>
+            </ul>
+            <a href="https://wa.me/17282206735?text=Quiero%20un%20sistema%20de%20IA" target="_blank" class="scard__cta">
+              Quiero IA en mi negocio →
+            </a>
+          </div>
+          <div class="scard__glow"></div>
+        </div>
+
+      </div>
+
+      <!-- CTA CENTRAL -->
+      <div class="servicios__cta" id="servicios-cta">
+        <div class="servicios__cta-inner">
+          <p>¿No sabes por dónde empezar? Escríbeme y te digo exactamente qué necesitas.</p>
+          <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20hablar%20de%20mi%20proyecto" target="_blank" class="btn btn--primary btn--lg">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cuéntame tu proyecto
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================ PROYECTOS -->
+  <section class="proyectos" id="proyectos">
+    <div class="container">
+
+      <div class="proyectos__header" id="proyectos-header">
+        <span class="section-tag mono">// PROYECTOS ACTIVOS</span>
+        <h2 class="section-title">Lo que estoy<br/>construyendo ahora</h2>
+        <p class="section-sub">6 proyectos en producción. Todos operados por una sola persona.</p>
+      </div>
+
+      <div class="proyectos__grid" id="proyectos-grid">
+
+        <div class="pcard" data-index="0" id="pcard-0">
+          <div class="pcard__glow"></div>
+          <div class="pcard__top"><div class="pcard__icon pcard__icon--blue"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.2"/><path d="M20 4C20 4 12 12 12 20C12 28 20 36 20 36C20 36 28 28 28 20C28 12 20 4 20 4Z" stroke="currentColor" stroke-width="1.2"/><path d="M4 20H36" stroke="currentColor" stroke-width="1.2"/></svg></div><div class="pcard__badge pcard__badge--live">● LIVE</div></div>
+          <h3 class="pcard__name">Multizona</h3>
+          <p class="pcard__desc">Motor de búsqueda local para RD sobre IPFS + CoreDAO. Tarjetas NFC en hoteles, malls y aeropuertos. $2.5/mes.</p>
+          <div class="pcard__tags"><span>IPFS</span><span>CoreDAO</span><span>NFC</span></div>
+          <a href="#" class="pcard__link">Ver proyecto →</a>
+        </div>
+
+        <div class="pcard" data-index="1" id="pcard-1">
+          <div class="pcard__glow"></div>
+          <div class="pcard__top"><div class="pcard__icon pcard__icon--orange"><svg viewBox="0 0 40 40" fill="none"><path d="M8 28C8 28 12 16 20 16C28 16 32 28 32 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 28H34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="12" r="3" stroke="currentColor" stroke-width="1.2"/></svg></div><div class="pcard__badge pcard__badge--live">● LIVE</div></div>
+          <h3 class="pcard__name">El Arepero</h3>
+          <p class="pcard__desc">Restaurante venezolano 24/7 + bot "Gaby" (n8n + Llama 70B) + canal YouTube "Caos en la Mesa".</p>
+          <div class="pcard__tags"><span>n8n</span><span>WhatsApp Bot</span><span>24/7</span></div>
+          <a href="#" class="pcard__link">elarepero.com →</a>
+        </div>
+
+        <div class="pcard" data-index="2" id="pcard-2">
+          <div class="pcard__glow"></div>
+          <div class="pcard__top"><div class="pcard__icon pcard__icon--cyan"><svg viewBox="0 0 40 40" fill="none"><path d="M20 8l8 8h-5v14h-6V16h-5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M8 32H32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="pcard__badge pcard__badge--live">● LIVE</div></div>
+          <h3 class="pcard__name">VenturesPC</h3>
+          <p class="pcard__desc">Landing de excursiones para turistas en Punta Cana. Estética glassmorphism, conversión directa.</p>
+          <div class="pcard__tags"><span>Turismo</span><span>Glassmorphism</span></div>
+          <a href="#" class="pcard__link">venturespc.com →</a>
+        </div>
+
+        <div class="pcard" data-index="3" id="pcard-3">
+          <div class="pcard__glow"></div>
+          <div class="pcard__top"><div class="pcard__icon pcard__icon--purple"><svg viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="4" stroke="currentColor" stroke-width="1.2"/><circle cx="14" cy="20" r="3" stroke="currentColor" stroke-width="1.2"/><circle cx="26" cy="20" r="3" stroke="currentColor" stroke-width="1.2"/></svg></div><div class="pcard__badge pcard__badge--build">◐ BUILD</div></div>
+          <h3 class="pcard__name">TR0Y · STUDIO</h3>
+          <p class="pcard__desc">Oficina 3D en Three.js con 5 agentes AI: Nova, Rex, Zara, Marco y Kai. Kanban + localStorage.</p>
+          <div class="pcard__tags"><span>Three.js</span><span>Claude API</span><span>5 AI Agents</span></div>
+          <div class="pcard__agents"><span class="agent-dot" title="Nova">N</span><span class="agent-dot" title="Rex">R</span><span class="agent-dot" title="Zara">Z</span><span class="agent-dot" title="Marco">M</span><span class="agent-dot" title="Kai">K</span></div>
+        </div>
+
+        <div class="pcard" data-index="4" id="pcard-4">
+          <div class="pcard__glow"></div>
+          <div class="pcard__top"><div class="pcard__icon pcard__icon--green"><svg viewBox="0 0 40 40" fill="none"><path d="M20 8C13.4 8 8 13.4 8 20C8 26.6 13.4 32 20 32C26.6 32 32 26.6 32 20" stroke="currentColor" stroke-width="1.2"/><path d="M28 8V16H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 8L20 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="pcard__badge pcard__badge--build">◐ CRECIENDO</div></div>
+          <h3 class="pcard__name">@liamdorian</h3>
+          <p class="pcard__desc">Marca personal techwear/cyberpunk. 30 Reels planificados + sistema n8n de publicación automática.</p>
+          <div class="pcard__tags"><span>Techwear</span><span>n8n</span><span>Reels</span></div>
+          <a href="#" class="pcard__link">@liamdorian →</a>
+        </div>
+
+        <div class="pcard" data-index="5" id="pcard-5">
+          <div class="pcard__glow"></div>
+          <div class="pcard__top"><div class="pcard__icon pcard__icon--teal"><svg viewBox="0 0 40 40" fill="none"><path d="M20 32V20M20 20C20 20 12 18 10 10C16 10 22 14 20 20Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 20C20 20 28 18 30 10C24 10 18 14 20 20Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 32H26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="pcard__badge pcard__badge--live">● LIVE</div></div>
+          <h3 class="pcard__name">Agropecuaria Silvestre</h3>
+          <p class="pcard__desc">Pesca deportiva, mascotas y contenido digital para la comunidad de Punta Cana.</p>
+          <div class="pcard__tags"><span>Pesca Deportiva</span><span>Punta Cana</span></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ HISTORIA -->
+  <section class="historia" id="historia">
+    <div class="container">
+      <div class="historia__header" id="historia-header">
+        <span class="section-tag mono">// MI HISTORIA</span>
+        <h2 class="section-title">El Puente Roto</h2>
+      </div>
+      <div class="historia__body">
+        <div class="historia__text" id="historia-text">
+          <p class="historia__p historia__p--big" id="h-p1">Hay un punto donde el camino conocido desaparece. El puente se rompe. No hay vuelta atrás y el otro lado parece imposiblemente lejos.</p>
+          <p class="historia__p" id="h-p2">Sin equipo. Sin inversión. Sin red de seguridad. Solo una laptop, conexión a internet y la certeza de que rendirse no era una opción.</p>
+          <p class="historia__p historia__p--highlight" id="h-p3">Aprendí a operar como sistema — automatizar, delegar a máquinas, y construir en silencio mientras el Caribe hace ruido afuera. <strong>Eso mismo hago para mis clientes.</strong></p>
+          <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20lei%20tu%20historia%20y%20quiero%20hablar" target="_blank" class="btn btn--primary" style="margin-top:8px">
+            Trabajemos juntos →
+          </a>
+        </div>
+        <div class="historia__visual" id="historia-visual">
+
+          <!-- Foto movida desde hero -->
+          <div class="photo-scene" id="photo-scene">
+            <div class="photo-frame" id="photo-frame">
+              <div class="photo-frame__border"></div>
+              <div class="photo-img-wrap">
+                <img src="img/253.jpg" alt="Im Troy" class="photo-img" id="photo-img"
+                     onerror="this.parentElement.classList.add('photo-placeholder')"/>
+                <div class="photo-placeholder-inner">
+                  <span class="mono" style="color:var(--cyan);font-size:13px;">← Agrega img/253.jpg</span>
+                </div>
+              </div>
+              <div class="photo-overlay">
+                <span class="photo-overlay__name">Im Troy</span>
+                <span class="photo-overlay__handle mono">@liamdorian</span>
+              </div>
+              <div class="photo-badge photo-badge--1" id="pb1">
+                <img src="img/multizona-logo.png" alt="Multizona"
+                     onerror="this.outerHTML='<span class=\'badge-text\'>Multizona</span>'" />
+                <span>multizona</span>
+              </div>
+              <div class="photo-badge photo-badge--2" id="pb2">
+                <span class="badge-icon">⚡</span>
+                <span>+6 proyectos</span>
+              </div>
+              <div class="photo-badge photo-badge--3" id="pb3">
+                <span class="badge-icon">🤖</span>
+                <span>IA · n8n · Web</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bridge-card">
+            <div class="bridge-card__line"></div>
+            <div class="bridge-card__content">
+              <div class="bridge-stat"><span class="bridge-stat__year mono">2024→</span><span class="bridge-stat__label">Construcción activa</span></div>
+              <div class="bridge-stat"><span class="bridge-stat__year mono">6+</span><span class="bridge-stat__label">Marcas en operación</span></div>
+              <div class="bridge-stat"><span class="bridge-stat__year mono">RD</span><span class="bridge-stat__label">Base de operaciones</span></div>
+            </div>
+            <div class="bridge-card__quote">
+              <span>"El ruido afuera, el sistema adentro."</span>
+              <span class="bridge-card__author mono">— Troy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ STACK -->
+  <section class="stack" id="stack">
+    <div class="container">
+      <div class="stack__header" id="stack-header">
+        <span class="section-tag mono">// TECH STACK</span>
+        <h2 class="section-title">Las herramientas<br/>del sistema</h2>
+      </div>
+      <div class="stack__grid" id="stack-grid">
+        <div class="stool" data-i="0"><div class="stool__icon">⚙️</div><span class="stool__name">n8n</span><span class="stool__cat mono">Automatización</span></div>
+        <div class="stool" data-i="1"><div class="stool__icon">🧠</div><span class="stool__name">Llama 3.3 70B</span><span class="stool__cat mono">IA / NVIDIA</span></div>
+        <div class="stool" data-i="2"><div class="stool__icon">◆</div><span class="stool__name">Claude API</span><span class="stool__cat mono">IA / Anthropic</span></div>
+        <div class="stool" data-i="3"><div class="stool__icon">△</div><span class="stool__name">Three.js</span><span class="stool__cat mono">3D / WebGL</span></div>
+        <div class="stool" data-i="4"><div class="stool__icon">⬡</div><span class="stool__name">IPFS</span><span class="stool__cat mono">Descentralizado</span></div>
+        <div class="stool" data-i="5"><div class="stool__icon">◈</div><span class="stool__name">CoreDAO</span><span class="stool__cat mono">Blockchain</span></div>
+        <div class="stool" data-i="6"><div class="stool__icon">💬</div><span class="stool__name">WhatsApp API</span><span class="stool__cat mono">Comunicación</span></div>
+        <div class="stool" data-i="7"><div class="stool__icon">📸</div><span class="stool__name">Meta Graph API</span><span class="stool__cat mono">Social</span></div>
+        <div class="stool" data-i="8"><div class="stool__icon">🎬</div><span class="stool__name">Kling AI</span><span class="stool__cat mono">Video IA</span></div>
+        <div class="stool" data-i="9"><div class="stool__icon">✦</div><span class="stool__name">Midjourney</span><span class="stool__cat mono">Imagen IA</span></div>
+        <div class="stool" data-i="10"><div class="stool__icon">✂️</div><span class="stool__name">CapCut</span><span class="stool__cat mono">Video</span></div>
+        <div class="stool" data-i="11"><div class="stool__icon">🌐</div><span class="stool__name">GSAP + Three.js</span><span class="stool__cat mono">Animación 3D</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONTACTO CTA FINAL -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__bg"><div class="contacto__orb contacto__orb--1"></div><div class="contacto__orb contacto__orb--2"></div><div class="contacto__grid"></div></div>
+    <div class="container">
+      <div class="contacto__inner" id="contacto-inner">
+        <div class="contacto__label mono" id="contacto-label">[ Abierto a proyectos · RD y remotos ]</div>
+        <h2 class="contacto__title" id="contacto-title">¿Construimos<br/>algo <em>memorable</em>?</h2>
+        <p class="contacto__sub" id="contacto-sub">No importa si es una landing, un bot, una automatización completa o tu marca desde cero. Escríbeme y en 24h tenemos una respuesta.</p>
+        <div class="contacto__channels" id="contacto-channels">
+          <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20contratar%20tus%20servicios" target="_blank" class="channel-btn channel-btn--primary">
+            <span class="channel-btn__icon">📱</span>
+            <span>Escríbeme por WhatsApp</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+          </a>
+          <a href="mailto:troy@liamdorian.com" class="channel-btn">
+            <span class="channel-btn__icon">✉️</span>
+            <span>Email directo</span>
+          </a>
+          <a href="https://instagram.com/liamdorian" target="_blank" class="channel-btn">
+            <span class="channel-btn__icon">📸</span>
+            <span>@liamdorian</span>
+          </a>
+        </div>
+        <div class="contacto__location" id="contacto-location">
+          <span class="mono">18°44'N · 68°27'O</span>
+          <span>·</span>
+          <span>Uvero Alto, Punta Cana · República Dominicana</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand"><span class="nav__mark">TR0Y</span><span class="nav__sep">·</span><span class="nav__sub">STUDIO</span></div>
+        <div class="footer__links">
+          <a href="#servicios" class="footer__link">Servicios</a>
+          <a href="#proyectos" class="footer__link">Proyectos</a>
+          <a href="https://wa.me/17282206735" target="_blank" class="footer__link">WhatsApp</a>
+          <a href="https://instagram.com/liamdorian" target="_blank" class="footer__link">@liamdorian</a>
+        </div>
+        <div class="footer__copy mono">© 2026 · Construido solo, desde el Caribe.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUBBLES -->
+  <div class="float-ctas" id="float-ctas">
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20mi%20p%C3%A1gina%20web" target="_blank" class="float-cta" data-fi="0">
+      <span class="float-cta__icon">🌐</span>
+      <span class="float-cta__text">Quiero mi <strong>página web</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20ser%20visto%20en%20Google" target="_blank" class="float-cta" data-fi="1">
+      <span class="float-cta__icon">📈</span>
+      <span class="float-cta__text">Quiero aparecer <strong>en Google</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20que%20mi%20negocio%20venda%20m%C3%A1s" target="_blank" class="float-cta" data-fi="2">
+      <span class="float-cta__icon">💰</span>
+      <span class="float-cta__text">Quiero que mi <strong>negocio venda</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20un%20agente%20de%20IA" target="_blank" class="float-cta" data-fi="3">
+      <span class="float-cta__icon">🤖</span>
+      <span class="float-cta__text">Quiero un <strong>agente de IA</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20mi%20logo%20y%20marca" target="_blank" class="float-cta" data-fi="4">
+      <span class="float-cta__icon">🎨</span>
+      <span class="float-cta__text">Quiero mi <strong>logo y marca</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20automatizar%20mi%20negocio" target="_blank" class="float-cta" data-fi="5">
+      <span class="float-cta__icon">⚡</span>
+      <span class="float-cta__text">Quiero <strong>automatizar</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20quiero%20un%20bot%20de%20WhatsApp" target="_blank" class="float-cta" data-fi="6">
+      <span class="float-cta__icon">📱</span>
+      <span class="float-cta__text">Quiero un <strong>bot WhatsApp</strong></span>
+    </a>
+    <a href="https://wa.me/17282206735?text=Hola%20Troy%2C%20soy%20empresario%20quiero%20escalar" target="_blank" class="float-cta" data-fi="7">
+      <span class="float-cta__icon">🏢</span>
+      <span class="float-cta__text">Soy empresario, <strong>quiero escalar</strong></span>
+    </a>
+  </div>
+
+  <!-- GABY ASSISTANT -->
+  <div class="gaby-widget" id="gaby-widget" aria-live="polite">
+    <button class="gaby-launcher" id="gaby-launcher" type="button" aria-expanded="false" aria-controls="gaby-panel">
+      <span class="gaby-launcher__orb"></span>
+      <span class="gaby-launcher__text">
+        <span class="gaby-launcher__label mono">GABY</span>
+        <span class="gaby-launcher__sub">Asistente de voz</span>
+      </span>
+    </button>
+
+    <section class="gaby-panel" id="gaby-panel" aria-label="Asistente Gaby">
+      <header class="gaby-panel__header">
+        <div class="gaby-panel__identity">
+          <span class="gaby-avatar"><span></span></span>
+          <div>
+            <div class="gaby-panel__name">Gaby</div>
+            <div class="gaby-panel__status mono" id="gaby-status">en línea · voz activada</div>
+          </div>
+        </div>
+        <button class="gaby-panel__close" id="gaby-close" type="button" aria-label="Cerrar asistente">×</button>
+      </header>
+
+      <div class="gaby-panel__messages" id="gaby-messages" role="log" aria-live="polite"></div>
+
+      <div class="gaby-panel__chips" id="gaby-chips">
+        <button type="button" class="gaby-chip" data-gaby-q="qué servicios ofreces">Servicios</button>
+        <button type="button" class="gaby-chip" data-gaby-q="quiero una landing premium">Landing</button>
+        <button type="button" class="gaby-chip" data-gaby-q="quiero un bot de whatsapp">Bot WhatsApp</button>
+        <button type="button" class="gaby-chip" data-gaby-q="cuál es el precio de una automatización">Precios</button>
+        <button type="button" class="gaby-chip" data-gaby-q="quiero cotizar y cerrar por whatsapp">Cerrar venta</button>
+      </div>
+
+      <form class="gaby-panel__composer" id="gaby-form">
+        <button class="gaby-mic" id="gaby-mic" type="button" aria-label="Hablar con Gaby">🎙</button>
+        <input class="gaby-input" id="gaby-input" type="text" placeholder="Escribe o habla con Gaby..." autocomplete="off" />
+        <button class="gaby-send" type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
